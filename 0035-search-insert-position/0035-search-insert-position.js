@@ -13,3 +13,18 @@ var searchInsert = function(nums, target) {
     }
     return nums.length; // 타겟값이 배열의 모든 요소보다 크다면 배열의 길이를 반환
 };
+
+
+/*
+var searchInsert = function(nums, target) {
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] >= target) {
+            return i; // 현재 값이 타겟보다 크거나 같으면 현재 인덱스 반환
+        }
+    }
+    return nums.length; // 타겟보다 모든 값이 작으면 nums.length 반환
+};
+
+
+
+*/
