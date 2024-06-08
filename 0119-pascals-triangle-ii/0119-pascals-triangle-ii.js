@@ -3,14 +3,27 @@
  * @return {number[]}
  */
 var getRow = function(rowIndex) {
-    // 파스칼의 삼각형에서 각 행은 1로 시작하므로, 초기화
+    // 결과를 저장할 배열 초기화
     let row = [1];
     
-    // 행의 각 요소를 계산
+    // 각 행을 순차적으로 생성
     for (let i = 1; i <= rowIndex; i++) {
-        // 이항 계수 공식을 사용하여 다음 요소를 계산
-        row[i] = row[i - 1] * (rowIndex - i + 1) / i;
+        // 현재 행을 저장할 배열 초기화
+        let newRow = [1];
+        
+        // 중간 요소들을 계산
+        for (let j = 1; j < row.length; j++) {
+            newRow[j] = row[j - 1] + row[j];
+        }
+        
+        // 현재 행의 마지막 요소는 항상 1
+        newRow.push(1);
+        
+        // 현재 행을 결과로 지정
+        row = newRow;
     }
     
+    // 결과 행 반환
     return row;
 };
+
