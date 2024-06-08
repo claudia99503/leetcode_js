@@ -17,7 +17,7 @@ var generate = function(numRows) {
         for (let j = 1; j < i; j++) { // i = numRows - 1
 		        // numRows = 3, i = 2에서 (2, 0) + (2, 1) / (2, 1) + (2, 2)
 		        // 바로 위 행의 두 요소를 더하여 현재 요소를 계산
-		        // numRows = 4, i = 3 은 [ 1, ?, ?, 1 ] 
+		        // numRows = 4, i = 3 은 [ 1, ?(i = 3, j = 1), ?(i = 3, j = 2), 1 ] 
 		    /*    
 		    i = 3, j = 1인 경우:  첫 번째 물음표 자리
             triangle[2][0]는 1 (위 행의 첫 번째 요소)
