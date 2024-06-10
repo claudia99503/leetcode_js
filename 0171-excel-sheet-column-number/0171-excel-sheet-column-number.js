@@ -40,3 +40,12 @@ var titleToNumber = function(columnTitle) {
 
 이 코드는 문자열을 순회하면서 각 문자를 26진수로 변환하여 최종 열 번호를 계산합니다.
 */
+
+/*
+1. 변수 `result`를 0으로 초기화한다.
+2. `columnTitle`의 각 문자를 순회한다.
+    1. 현재 문자의 ASCII 값에서 64를 빼서 `charValue`를 구한다.
+    2. `result`를 26배하고 `charValue`를 더하여 `result`를 갱신한다.
+3. 최종 결과 `result`를 반환한다.
+*/
+
