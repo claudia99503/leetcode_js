@@ -38,3 +38,20 @@ function ListNode(val, next) {
     this.val = (val === undefined ? 0 : val);
     this.next = (next === undefined ? null : next);
 }
+
+
+/*
+1. 함수 removeElements(head, val)을 정의한다:
+   - head가 null이 아니고 head의 값이 val인 동안:
+     - head를 head.next로 업데이트한다 (head 노드를 건너뜀).
+   
+   - 현재 노드를 추적하는 포인터 current를 head로 초기화한다.
+   
+2. current가 null이 아니고 current.next가 null이 아닌 동안:
+   - 만약 current.next의 값이 val과 같다면:
+     - current.next를 current.next.next로 설정한다 (다음 노드를 건너뜀).
+   - 그렇지 않으면:
+     - current를 current.next로 업데이트한다 (다음 노드로 이동).
+   
+3. head를 반환한다.
+*/
