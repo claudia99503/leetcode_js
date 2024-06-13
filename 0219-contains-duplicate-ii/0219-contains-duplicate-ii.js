@@ -11,6 +11,14 @@ var containsNearbyDuplicate = function(nums, k) {
     for (let i = 0; i < nums.length; i++) {
         // 현재 숫자가 Map에 존재하고, 그 인덱스 차이가 k 이하인지 확인합니다.
         if (map.has(nums[i]) && i - map.get(nums[i]) <= k) {
+            // map.get(nums[i]):
+            // map은 현재까지 nums 배열에서 각 요소의 마지막 인덱스를 저장하는 Map 객체입니다.
+            // map.get(nums[i])는 현재 요소 nums[i]가 마지막으로 등장했던 인덱스를 반환합니다.
+            // i - map.get(nums[i]):
+            // 현재 인덱스 i에서 마지막으로 nums[i]가 등장했던 인덱스를 뺀 값입니다.
+            // 이는 nums[i]가 현재 인덱스 i와 마지막 등장 인덱스 사이의 거리를 의미합니다.
+            // <= k:
+            // 이 거리가 k보다 작거나 같은지 확인합니다.
             return true; // 조건을 만족하면 true를 반환합니다.
         }
         // 현재 숫자와 인덱스를 Map에 추가합니다.
@@ -20,6 +28,10 @@ var containsNearbyDuplicate = function(nums, k) {
     // 모든 요소를 검사한 후에도 조건을 만족하는 쌍이 없다면 false를 반환합니다.
     return false;
 };
+/*
+
+
+*/
 
 /*
 1. 함수 `containsNearbyDuplicate`를 정의하고, 매개변수로 정수 배열 `nums`와 정수 `k`를 받는다.
