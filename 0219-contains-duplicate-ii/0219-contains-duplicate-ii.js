@@ -29,8 +29,8 @@ var containsNearbyDuplicate = function(nums, k) {
     return false;
 };
 /*
-
-
+map.get(nums[i])는 Map에서 키 nums[i]에 대응하는 값을 가져오는 역할을 합니다.
+map.set(nums[i], i)는 Map에 키 nums[i]와 그 값 i를 저장하거나, 기존 키의 값을 업데이트하는 역할을 합니다.
 */
 
 /*
