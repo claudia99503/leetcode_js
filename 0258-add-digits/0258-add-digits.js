@@ -17,6 +17,4 @@ var addDigits = function(num) {
     return num;
 };
 
-// 예시 사용법
-console.log(addDigits(38)); // 출력: 2
-console.log(addDigits(0));  // 출력: 0
+
