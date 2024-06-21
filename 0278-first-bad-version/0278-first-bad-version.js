@@ -65,3 +65,17 @@ var solution = function(isBadVersion) {
 8. **결과 반환**
    - `left`를 반환 (첫 번째 나쁜 버전의 인덱스를 가리킴).
 */
+
+
+/*
+var solution = function(isBadVersion) {
+    
+    return function(n) {
+        for (let i = 1; i <= n; i++) {
+            if (isBadVersion(i)) {
+                return i; // 첫 번째 나쁜 버전을 찾으면 반환
+            }
+        }
+    };
+};
+*/
