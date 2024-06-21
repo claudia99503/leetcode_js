@@ -104,7 +104,7 @@ var solution = function(isBadVersion) {
 /* 재귀함수
 var solution = function(isBadVersion) {
    
-   
+
     return function findFirstBadVersion(version) {
         if (isBadVersion(version)) {
             return version; // 현재 버전이 나쁜 버전이면 반환
@@ -113,4 +113,25 @@ var solution = function(isBadVersion) {
         }
     };
 };
+*/
+
+/*
+### 수도코드
+
+1. **함수 선언**
+   - `solution` 함수를 선언하고, `isBadVersion` 함수를 매개변수로 받음.
+
+2. **내부 재귀 함수 반환**
+   - `solution` 함수는 주어진 버전 `version`을 매개변수로 받는 내부 재귀 함수 `findFirstBadVersion`을 반환.
+
+3. **재귀 조건 확인**
+   - `findFirstBadVersion` 함수 내에서 현재 버전 `version`이 나쁜 버전인지 `isBadVersion(version)`으로 확인.
+   - 만약 `isBadVersion(version)`이 `true`이면:
+     - 현재 버전 `version`을 반환 (첫 번째 나쁜 버전).
+   - 그렇지 않으면:
+     - 다음 버전 (`version + 1`)을 검사하기 위해 `findFirstBadVersion(version + 1)`을 재귀 호출.
+
+4. **재귀 호출 종료**
+   - 조건이 충족될 때까지 재귀 호출 반복.
+   - 조건이 충족되면 첫 번째 나쁜 버전을 반환하고 재귀 호출 종료.
 */
