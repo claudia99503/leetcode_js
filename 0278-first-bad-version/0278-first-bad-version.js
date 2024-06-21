@@ -67,7 +67,7 @@ var solution = function(isBadVersion) {
 */
 
 
-/*
+/* 순차함수
 var solution = function(isBadVersion) {
 
     return function(n) {
@@ -99,4 +99,18 @@ var solution = function(isBadVersion) {
 
 5. **반복문 종료**
    - 반복문이 종료되면 함수도 종료.
+*/
+
+/* 재귀함수
+var solution = function(isBadVersion) {
+   
+   
+    return function findFirstBadVersion(version) {
+        if (isBadVersion(version)) {
+            return version; // 현재 버전이 나쁜 버전이면 반환
+        } else {
+            return findFirstBadVersion(version + 1); // 다음 버전을 검사
+        }
+    };
+};
 */
