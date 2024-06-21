@@ -69,7 +69,7 @@ var solution = function(isBadVersion) {
 
 /*
 var solution = function(isBadVersion) {
-    
+
     return function(n) {
         for (let i = 1; i <= n; i++) {
             if (isBadVersion(i)) {
@@ -78,4 +78,25 @@ var solution = function(isBadVersion) {
         }
     };
 };
+*/
+
+/*
+### 수도코드
+
+1. **함수 선언**
+   - `solution` 함수를 선언하고, `isBadVersion` 함수를 매개변수로 받음.
+
+2. **내부 함수 반환**
+   - `solution` 함수는 주어진 버전 `n`을 매개변수로 받는 내부 함수를 반환.
+
+3. **순차 탐색 시작**
+   - `for` 루프를 1부터 `n`까지 실행.
+
+4. **조건 확인**
+   - `isBadVersion(i)`를 호출하여 현재 버전 `i`가 나쁜 버전인지 확인.
+   - 만약 `isBadVersion(i)`가 `true`이면:
+     - 현재 버전 `i`를 반환 (첫 번째 나쁜 버전).
+
+5. **반복문 종료**
+   - 반복문이 종료되면 함수도 종료.
 */
