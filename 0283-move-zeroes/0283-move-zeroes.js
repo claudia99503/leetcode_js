@@ -30,3 +30,18 @@ var moveZeroes = function(nums) {
 3. `nonZeroIndex`부터 배열 끝까지 순회한다.
    a. 현재 위치에 0을 배치한다.
 */
+
+/*
+var moveZeroes = function(nums) {
+    let lastNonZeroFoundAt = 0; // 마지막 비영 요소가 위치한 인덱스
+
+    // 배열의 각 요소를 순회
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] !== 0) { // 현재 요소가 0이 아닌 경우
+            // 현재 요소와 lastNonZeroFoundAt 위치의 요소를 교환
+            [nums[lastNonZeroFoundAt], nums[i]] = [nums[i], nums[lastNonZeroFoundAt]];
+            lastNonZeroFoundAt++; // lastNonZeroFoundAt을 증가
+        }
+    }
+};
+*/
