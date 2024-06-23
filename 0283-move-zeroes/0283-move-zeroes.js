@@ -18,3 +18,15 @@ var moveZeroes = function(nums) {
         nums[i] = 0; // nonZeroIndex 이후의 모든 위치를 0으로 설정
     }
 };
+
+/*
+1. `nonZeroIndex`를 0으로 초기화한다.
+
+2. 배열의 각 요소를 순회한다.
+   a. 현재 요소가 0이 아닌 경우:
+      i. 현재 요소를 `nonZeroIndex` 위치에 배치한다.
+      ii. `nonZeroIndex`를 1 증가시킨다.
+
+3. `nonZeroIndex`부터 배열 끝까지 순회한다.
+   a. 현재 위치에 0을 배치한다.
+*/
