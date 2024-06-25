@@ -35,6 +35,18 @@ var solution = function(isBadVersion) {
     };
 };
 
+/*
+1. 초기 값: left = 1, right = 5
+2. 첫 번째 mid 값: 3
+- isBadVersion(3) 호출: false
+- left = 4
+3. 두 번째 mid 값: 4
+- isBadVersion(4) 호출: true
+- right = 4
+4. 종료 조건: left = 4, right = 4
+따라서, 첫 번째 불량 버전은 4입니다.
+*/
+
 
 /*
 ### 수도코드
