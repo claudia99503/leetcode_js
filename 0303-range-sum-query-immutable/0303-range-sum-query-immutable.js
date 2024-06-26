@@ -29,3 +29,14 @@ NumArray.prototype.sumRange = function(left, right) {
  * NumArray 객체를 생성하고 sumRange 메소드를 호출하는 예시입니다.
  */
 
+/*
+1. NumArray(nums)
+   1.1. 누적 합 배열(prefixSum)을 초기화하고 첫 번째 요소를 0으로 설정한다.
+   1.2. nums 배열의 각 요소에 대해 다음을 반복한다:
+       1.2.1. 현재 요소를 이전 누적 합에 더하여 누적 합 배열에 추가한다.
+       
+2. sumRange(left, right)
+   2.1. 주어진 left와 right 인덱스 사이의 요소들의 합을 계산하여 반환한다.
+       2.1.1. prefixSum 배열을 사용하여 누적 합의 차이를 계산한다.
+       2.1.2. 계산된 값을 반환한다.
+*/
