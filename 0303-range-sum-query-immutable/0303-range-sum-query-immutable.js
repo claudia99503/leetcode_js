@@ -41,18 +41,3 @@ NumArray.prototype.sumRange = function(left, right) {
        2.1.2. 계산된 값을 반환한다.
 */
 
-/* 시간 복잡도 : o(n)
-var NumArray = function(nums) {
-    this.nums = nums; // nums 배열을 객체의 속성으로 저장합니다.
-};
-
-* 주어진 left와 right 인덱스 사이의 요소들의 합을 반환합니다.
-
-NumArray.prototype.sumRange = function(left, right) {
-    let sum = 0; // 합을 저장할 변수 초기화
-    for (let i = left; i <= right; i++) {
-        sum += this.nums[i]; // left부터 right까지의 요소들을 합산
-    }
-    return sum; // 계산된 합을 반환
-};
-*/
