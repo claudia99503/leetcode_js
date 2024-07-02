@@ -34,3 +34,19 @@ var reverseVowels = function(s) {
     return arr.join('');
 };
 
+/*1. 함수 `reverseVowels`를 정의하고 문자열 `s`를 인자로 받습니다.
+2. 모음들을 담은 집합 `vowels`를 생성합니다.
+3. 문자열 `s`를 배열 `arr`로 변환합니다.
+4. 두 개의 포인터 `left`와 `right`를 초기화합니다.
+   - `left`는 0으로 초기화
+   - `right`는 `arr.length - 1`로 초기화
+5. `left`가 `right`보다 작을 동안 반복합니다:
+   1. `arr[left]`가 모음이 아닌 경우, `left`를 1 증가시킵니다.
+   2. `arr[right]`가 모음이 아닌 경우, `right`를 1 감소시킵니다.
+   3. `arr[left]`와 `arr[right]`가 모두 모음인 경우:
+      - `arr[left]`와 `arr[right]`의 값을 교환합니다.
+      - `left`를 1 증가시킵니다.
+      - `right`를 1 감소시킵니다.
+6. 배열 `arr`를 다시 문자열로 변환합니다.
+7. 변환된 문자열을 반환합니다.
+*/
