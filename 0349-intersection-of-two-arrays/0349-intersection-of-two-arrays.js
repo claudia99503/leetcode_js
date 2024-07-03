@@ -34,3 +34,27 @@ var intersection = function(nums1, nums2) {
 5. 최종 결과 배열 result 반환
 */
 
+/*
+var intersection = function(nums1, nums2) {
+    // 결과를 저장할 빈 배열 생성
+    let result = [];
+    // 교집합 요소를 저장할 빈 집합 생성
+    let set = new Set();
+
+    // nums1 배열의 각 요소에 대해 반복
+    for (let i = 0; i < nums1.length; i++) {
+        // nums2 배열의 각 요소에 대해 반복
+        for (let j = 0; j < nums2.length; j++) {
+            // nums1의 현재 요소와 nums2의 현재 요소가 같은지 확인
+            if (nums1[i] === nums2[j]) {
+                // 같으면 집합에 추가 (중복 요소는 자동으로 처리됨)
+                set.add(nums1[i]);
+            }
+        }
+    }
+
+    // 집합의 요소들을 배열로 변환하여 반환
+    return Array.from(set);
+};
+*/
+
