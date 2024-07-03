@@ -23,4 +23,14 @@ var intersection = function(nums1, nums2) {
     // 최종 결과 배열 반환
     return result;
 };
+/*
+1. nums1 배열의 요소들을 set1으로 변환
+2. nums2 배열의 요소들을 set2로 변환
+3. 결과를 저장할 빈 배열 result 생성
+4. set1의 각 요소에 대해 반복
+   4.1 현재 요소 num을 가져옴
+   4.2 num이 set2에 존재하는지 확인
+       4.2.1 존재하면, result 배열에 num 추가
+5. 최종 결과 배열 result 반환
+*/
 
