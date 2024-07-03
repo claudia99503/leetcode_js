@@ -57,6 +57,7 @@ var intersection = function(nums1, nums2) {
     return Array.from(set);
 };
 */
+/*Array.from은 유사 배열 객체나 반복 가능한 객체(예: Set)를 배열로 변환하는 메서드. 이 메서드는 새로운 배열 인스턴스를 생성하여 반환*/
 
 /*
 1. 빈 배열 result 생성
