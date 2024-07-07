@@ -33,6 +33,61 @@ var isPerfectSquare = function(num) {
 };
 
 /*
+num = 16
+1. 초기 설정:
+
+- num = 16
+- left = 1
+- right = 16
+
+2. 첫 번째 반복:
+
+- mid = Math.floor((1 + 16) / 2) = 8
+- square = 8 * 8 = 64
+- square > num이므로 right = mid - 1 = 7
+
+3. 두 번째 반복:
+
+- mid = Math.floor((1 + 7) / 2) = 4
+- square = 4 * 4 = 16
+- square === num이므로 return true
+
+num = 14
+1. 초기 설정:
+
+- num = 14
+- left = 1
+- right = 14
+
+2. 첫 번째 반복:
+
+- mid = Math.floor((1 + 14) / 2) = 7
+- square = 7 * 7 = 49
+- square > num이므로 right = mid - 1 = 6
+
+3. 두 번째 반복:
+
+- mid = Math.floor((1 + 6) / 2) = 3
+- square = 3 * 3 = 9
+- square < num이므로 left = mid + 1 = 4
+
+4.세 번째 반복:
+
+- mid = Math.floor((4 + 6) / 2) = 5
+- square = 5 * 5 = 25
+- square > num이므로 right = mid - 1 = 4
+
+5. 네 번째 반복:
+
+- mid = Math.floor((4 + 4) / 2) = 4
+- square = 4 * 4 = 16
+- square > num이므로 right = mid - 1 = 3
+
+반복 조건 left <= right를 더 이상 만족하지 않으므로, 반복이 종료됩니다.
+위의 단계에서 보듯이, square가 num과 같아지는 경우가 없으므로 false를 반환하게 됩니다.
+*/
+
+/*
 var isPerfectSquare = function(num) {
     // num이 1보다 작으면 false를 반환합니다.
     if (num < 1) return false;
