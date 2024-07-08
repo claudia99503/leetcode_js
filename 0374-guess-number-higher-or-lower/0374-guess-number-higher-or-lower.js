@@ -20,13 +20,13 @@ var guessNumber = function(n) {
         let result = guess(mid);
         
         if (result === 0) {
-            return mid;  
+            return mid;  // 정답을 찾았을 때
         } else if (result === 1) {
-            left = mid + 1;  
+            left = mid + 1;  // 선택한 숫자가 더 크다면, 오른쪽 절반을 탐색
         } else {
-            right = mid - 1;  
+            right = mid - 1;  // 선택한 숫자가 더 작다면, 왼쪽 절반을 탐색
         }
     }
     
-    return -1;  
+    return -1;  // 이 코드는 논리적으로 도달하지 않음, 문제의 제약조건으로 보장된 부분
 };
