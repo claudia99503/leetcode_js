@@ -39,6 +39,20 @@ var sumOfLeftLeaves = function(root) {
 };
 
 /*
+1. **왼쪽 자식이 잎 노드인 경우**:
+   - `node.left`가 존재하고 `node.left`가 잎 노드(`!node.left.left && !node.left.right`)인 경우, 
+   `node.left.val`을 `sum`에 더합니다.
+
+2. **왼쪽 자식이 잎 노드가 아닌 경우**:
+   - `node.left`가 존재하지만 잎 노드가 아닌 경우, 재귀적으로 `node.left`를 탐색합니다.
+
+3. **오른쪽 자식**:
+   - `node.right`가 존재하는 경우, 재귀적으로 `node.right`를 탐색합니다.
+   오른쪽 자식이 왼쪽 잎 노드를 가질 수 있으므로, 
+   전체 트리를 탐색하기 위해 재귀 호출을 수행합니다.
+*/
+
+/*
 1. **함수 정의**: `sumOfLeftLeaves` 함수를 정의합니다.
 2. **루트 노드 검사**:
    - 만약 `root`가 `null`이면 0을 반환합니다.
