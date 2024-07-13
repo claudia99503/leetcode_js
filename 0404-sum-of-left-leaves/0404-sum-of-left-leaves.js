@@ -39,6 +39,13 @@ var sumOfLeftLeaves = function(root) {
 };
 
 /*
+      node
+     /   \
+node.left node.right
+   / \
+ null null
+
+
 1. **왼쪽 자식이 잎 노드인 경우**:
    - `node.left`가 존재하고 `node.left`가 잎 노드(`!node.left.left && !node.left.right`)인 경우, 
    `node.left.val`을 `sum`에 더합니다.
