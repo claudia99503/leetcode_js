@@ -49,3 +49,8 @@ function fizzBuzz(n) {
 7. **결과 반환**
    - `answer` 배열을 반환한다.
 */
+
+// 예시 테스트
+console.log(fizzBuzz(3));  // ["1", "2", "Fizz"]
+console.log(fizzBuzz(5));  // ["1", "2", "Fizz", "4", "Buzz"]
+console.log(fizzBuzz(15)); // ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"]
