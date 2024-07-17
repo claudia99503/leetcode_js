@@ -48,4 +48,5 @@ var titleToNumber = function(columnTitle) {
     2. `result`를 26배하고 `charValue`를 더하여 `result`를 갱신한다.
 3. 최종 결과 `result`를 반환한다.
 */
+/* 테스트 */
 
