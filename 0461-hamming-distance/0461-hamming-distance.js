@@ -34,4 +34,28 @@ var hammingDistance = function(x, y) {
     return result;
 };
 
+/*
+수도 코드
+1. 정수 x와 y를 이진 문자열로 변환한다.
+    - binaryStrX에 x를 2진수 문자열로 변환한 값을 저장한다.
+    - binaryStrY에 y를 2진수 문자열로 변환한 값을 저장한다.
+
+2. 두 이진 문자열 중 더 긴 문자열의 길이를 구한다.
+    - maxLength에 binaryStrX와 binaryStrY 중 더 긴 문자열의 길이를 저장한다.
+
+3. 해밍 거리 계산을 위한 초기값을 설정한다.
+    - result를 0으로 초기화한다.
+
+4. 두 이진 문자열의 길이가 maxLength와 같아질 때까지 앞에 '0'을 추가한다.
+    - binaryStrX의 길이가 maxLength보다 작으면 길이가 같아질 때까지 앞에 '0'을 추가한다.
+    - binaryStrY의 길이가 maxLength보다 작으면 길이가 같아질 때까지 앞에 '0'을 추가한다.
+
+5. 두 이진 문자열의 각 비트를 비교하여 서로 다른 비트의 수를 센다.
+    - maxLength 길이만큼 반복한다.
+        - binaryStrX와 binaryStrY의 각 비트를 비교한다.
+        - 두 비트가 다르면 result를 1 증가시킨다.
+
+6. 최종 해밍 거리를 반환한다.
+    - result를 반환한다.
+*/
 
