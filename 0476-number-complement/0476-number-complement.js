@@ -14,8 +14,7 @@ var findComplement = function(num) {
         }
     }
      
-    let number = parseInt(newBinaryString, 2);
+    return parseInt(newBinaryString, 2);
 
-    return number;
 };
 
