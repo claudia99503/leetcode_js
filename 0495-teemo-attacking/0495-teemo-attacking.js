@@ -4,19 +4,18 @@
  * @return {number}
  */
 var findPoisonedDuration = function(timeSeries, duration) {
-    let result = [];
-    
-    if (duration === 0) {
-        return 0;
+    if (timeSeries.length === 0) return 0;
+
+    let totalPoisonedTime = 0;
+
+    for (let i = 0; i < timeSeries.length - 1; i++) {
+        let interval = timeSeries[i + 1] - timeSeries[i];
+
+        totalPoisonedTime += Math.min(interval, duration);
     }
 
-    for (let i = 0; i < timeSeries.length; i++) {
-        result.push(timeSeries[i], timeSeries[i] + duration - 1);
-    }
+    totalPoisonedTime += duration;
 
-    let uniqueResultSet = new Set(result);
-    let uniqueResultArray = [...uniqueResultSet];
-
-    return uniqueResultArray.length;
+    return totalPoisonedTime;
 };
 
