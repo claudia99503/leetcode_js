@@ -3,24 +3,22 @@
  * @return {number}
  */
 var findLengthOfLCIS = function(nums) {
-    let gap = nums[1] - nums[0];
-    const result = [];
+    if (nums.length === 0) return 0;
+    if (nums.length === 1) return 1;
 
-    if (gap > 0) {
-        for (let i = 1; i < nums.length; i += gap) {
-            if (i + 1 < nums.length && gap !== nums[i+1] - nums[i]) {
-                gap = nums[i+1] - nums[i];
-            }
-            else {
-                result.push(i-1);
-                result.push(i);
-                result.push(i+1);
-            }
+    let gap = nums[1] - nums[0];
+    let result = 1;
+    let currentLength = 1;
+
+    for (let i = 1; i < nums.length; i++) {
+        if (nums[i] > nums[i - 1]) {
+            currentLength++;
+            result = Math.max(result, currentLength);
+        } else {
+            currentLength = 1;
         }
-    } else if (gap === 0) {
-        return 1;
     }
 
-    return result.length;
+    return result;
 };
 
